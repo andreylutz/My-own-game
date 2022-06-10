@@ -8,7 +8,7 @@ export const questionReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'INIT_QUESTION': {
       const stateCopy = { ...state };
-      stateCopy.part = action.payload;
+      stateCopy.quest = action.payload;
       return stateCopy;
     }
 

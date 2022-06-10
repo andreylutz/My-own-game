@@ -1,6 +1,6 @@
 import React from 'react';
 import './questiontable.css';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const QuestionTable = () => {
   return (
@@ -8,31 +8,31 @@ const QuestionTable = () => {
      <table id="table">
 	<tbody>
 		<tr>
-			<td>ТЕМА</td>
-			<td className="tds"><a className='numberScores' href='#openQuestion'>150</a></td>
-			<td className="tds"><a className='numberScores' href='#openQuestion'>200</a></td>
-			<td className="tds"><a className='numberScores' href='#openQuestion'>350</a></td>
-      <td className="tds"><a className='numberScores' href='#openQuestion'>400</a></td>
-      <td className="tds"><a className='numberScores' href='#openQuestion'>550</a></td>
-      <td className="tds"><a className='numberScores' href='#openQuestion'>800</a></td>
+			<td>IT</td>
+			<td className="tds"><a className='numberScores' href='#1'>150</a></td>
+			<td className="tds"><a className='numberScores' href='#2'>200</a></td>
+			<td className="tds"><a className='numberScores' href='#3'>350</a></td>
+      <td className="tds"><a className='numberScores' href='#4'>400</a></td>
+      <td className="tds"><a className='numberScores' href='#5'>550</a></td>
+      <td className="tds"><a className='numberScores' href='#6'>800</a></td>
 		</tr>
 		<tr>
-    <td>ТЕМА</td>
-			<td className="tds"><a className='numberScores' href='#openQuestion' >150</a></td>
-			<td className="tds"><a className='numberScores' href='#openQuestion'>200</a></td>
-			<td className="tds"><a className='numberScores' href='#openQuestion'>350</a></td>
-      <td className="tds"><a className='numberScores' href='#openQuestion'>400</a></td>
-      <td className="tds"><a className='numberScores' href='#openQuestion'>550</a></td>
-      <td className="tds"><a className='numberScores' href='#openQuestion'>800</a></td>
+    <td>Фильмы</td>
+			<td className="tds"><a className='numberScores' href='#7' >150</a></td>
+			<td className="tds"><a className='numberScores' href='#8'>200</a></td>
+			<td className="tds"><a className='numberScores' href='#9'>350</a></td>
+      <td className="tds"><a className='numberScores' href='#10'>400</a></td>
+      <td className="tds"><a className='numberScores' href='#11'>550</a></td>
+      <td className="tds"><a className='numberScores' href='#12'>800</a></td>
 		</tr>
 		<tr>
-    <td>ТЕМА</td>
-			<td className="tds"><a className='numberScores' href='#openQuestion'>150</a></td>
-			<td className="tds"><a className='numberScores' href='#openQuestion'>200</a></td>
-			<td className="tds"><a className='numberScores' href='#openQuestion'>350</a></td>
-      <td className="tds"><a className='numberScores' href='#openQuestion'>400</a></td>
-      <td className="tds"><a className='numberScores' href='#openQuestion'>550</a></td>
-      <td className="tds"><a className='numberScores' href='#openQuestion'>800</a></td>
+    <td>Животные</td>
+			<td className="tds"><a className='numberScores' href='#13'>150</a></td>
+			<td className="tds"><a className='numberScores' href='#14'>200</a></td>
+			<td className="tds"><a className='numberScores' href='#15'>350</a></td>
+      <td className="tds"><a className='numberScores' href='#16'>400</a></td>
+      <td className="tds"><a className='numberScores' href='#17'>550</a></td>
+      <td className="tds"><a className='numberScores' href='#18'>800</a></td>
 		</tr>
 	</tbody>
 </table>
