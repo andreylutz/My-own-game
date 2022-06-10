@@ -1,0 +1,15 @@
+.share-block {
+  float: right;
+  padding-right: 15px;
+  line-height: 50px;
+}
+.share-block a {
+  color:rgba(165, 255, 228, 0.813);
+  display: inline-block;
+  margin-right: 7px;
+  transition: .4s linear;
+  text-decoration:none;
+}
+.share-block a:hover {
+  color: rgb(0, 0, 255);
+}
