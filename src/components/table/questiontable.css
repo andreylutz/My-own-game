@@ -1,0 +1,56 @@
+#table {
+  position: relative;
+  top: 100px;
+  left: 50px;
+  text-align: center;
+  width: 800px;
+  height: 300px;
+}
+
+#table tbody tr:nth-child(3n+1){
+	background:  #42dcd7;
+}
+ 
+#table tbody tr:nth-child(3n+2){
+	background: #b06ac9;
+}
+ 
+#table tbody tr:nth-child(3n+3){
+	background: #8edb4f;
+}
+
+.tds {
+  border-color: #369886;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #369886 inset, 0 0 0 0 #369886;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  animation:tbs 3s infinite;
+  /* animation:tbs .75s ease-out infinite; */
+}
+
+.tds:hover {
+  box-shadow: 0 0 10px 0 #369886 inset, 0 0 10px 4px #369886;
+}
+
+.blinking{
+  
+}
+
+
+
+#score {
+  font-size: 40px;
+  position: relative;
+  bottom: 100px;
+  left: 75%;
+}
+
+.numberScores {
+  padding-top: 25%;
+  display: block;
+  height: 100%;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
