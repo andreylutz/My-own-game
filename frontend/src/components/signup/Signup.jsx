@@ -1,7 +1,31 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import './signup.css';
 
 const Signup = () => {
+
+  const [show, setShow] = useState(false);
+  const inputtwo = useRef();
+  const inputthree = useRef();
+
+  const handleClose = async (event) => {
+    event.preventDefault();
+    const response = await fetch('http://localhost:2500/registrate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
+      body: JSON.stringify({
+        username: inputtwo.current.value,
+        password: inputthree.current.value,
+      }),
+
+    });
+    const text = await response.json();
+    console.log(text);
+
+    setShow(false);
+  };
+
+
   return (
   <div id="openModal" className="signup">
   <div className="signup-dialog">
@@ -11,10 +35,9 @@ const Signup = () => {
         <a href="/" title="Close" className="close">×</a>
       </div>
       <div className="signup-body">    
-        <input type='text' className='pols' name='userName' placeholder='Придумайте логин'/>
-        <input type='password' className='pols' name='userPassword' placeholder='Придумайте пароль'/>
-        <input type='password' className='pols' name='userPasswordExam' placeholder='Подтвердите пароль'/>
-        <button type='button' className='click' name='authBatton'>Зарегистрироваться</button>
+        <input ref={inputtwo} type='text' className='pols' name='userName' placeholder='Придумайте логин'/>
+        <input ref={inputthree} type='password' className='pols' name='userPassword' placeholder='Придумайте пароль'/>
+        <button onClick={handleClose} type='button' className='click' name='authBatton'>Зарегистрироваться</button>
       </div>
     </div>
   </div>

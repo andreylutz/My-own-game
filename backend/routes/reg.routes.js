@@ -4,17 +4,16 @@ const { User } = require('../db/models');
 
 regRouter.route('/')
   .post(async (req, res) => {
-    const { login, password } = req.body;
-    const user = await User.findOne({ where: { login } });
+    const { username, password } = req.body;
+    const user = await User.findOne({ where: { username } });
     if (user) {
       res.send('Такой  уже зарегистрирован');
-      res.redirect('/registrate');
     } else {
       const newUser = await User.create({
-        login, password: await bcrypt.hash(password, 10),
+        username, password: await bcrypt.hash(password, 7),
       });
       req.session.user = newUser;
-      res.end();
+      res.send(newUser);
     }
   });
 

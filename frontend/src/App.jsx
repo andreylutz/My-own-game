@@ -1,16 +1,21 @@
-import Home from "./components/home/Home";
-import Signup from "./components/signup/Signup";
 import { Route, Routes } from 'react-router-dom';
-import { Context } from './context.js';
+import { Provider } from 'react-redux';
+
+import store from './store';
+
+import Home from "./components/home/Home";
+// import Signup from "./components/signup/Signup";
+
+
 
 function App() {
   return (
-    <Context.Provider>
+    <Provider store={store}>
         <Routes>
            <Route path="/" element={<Home/>}/>
            {/* <Route path="/auth" element={<Signup/>}/> */}
         </Routes>
-    </Context.Provider>
+    </Provider>
   );
 }
 

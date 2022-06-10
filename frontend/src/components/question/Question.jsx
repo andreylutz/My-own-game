@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './question.css';
+import { useDispatch } from 'react-redux';
+
+
 
 const Question = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    fetch('http://localhost:2500')
+      .then((response) => response.json())
+      .then((question) => dispatch({ type: 'INIT_QUESTIONS', payload: question.questions }));
+  }, [dispatch]);
+
   return (
     <div id="openQuestion" className="quest">
   <div className="quest-dialog">

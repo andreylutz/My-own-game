@@ -1,22 +1,15 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/extensions */
-const router = require('express').Router();
+// const router = require('express').Router();
 
-const ReactDOMServer = require('react-dom/server');
-const { Game } = require('../db/models');
-const Main = require('../views/Main');
+// const ReactDOMServer = require('react-dom/server');
+// const { Game } = require('../db/models');
 
-router.get('/', async (req, res) => {
-  const { user } = req.session;
-  // сортировка по времени проведения мероприятия
-  const partys = await Game.findAll({
-    order: [['startAt', 'DESC']],
-  });
-  
-  const html = ReactDOMServer.renderToStaticMarkup(main);
+// router.get('/', async (req, res) => {
+//   const { user } = req.session;
+//   // сортировка по времени проведения мероприятия
+//   const partys = await Game.findAll();
+//   res.end();
+// });
 
-  res.write('<!DOCTYPE html>');
-  res.end(html);
-});
-
-module.exports = router;
+// module.exports = router;
